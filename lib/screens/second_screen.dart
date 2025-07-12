@@ -60,7 +60,7 @@ class _SecondScreenState extends State<SecondScreen> {
             ),
             Spacer(),
             PoppinsText(
-              text: "Selected User ${selectedUser?.fullName ?? "Name"}",
+              text: selectedUser?.fullName ?? "Selected User Name",
               fontSize: 24,
               fontWeight: semiBold,
               color: Color(0xff04021D),
