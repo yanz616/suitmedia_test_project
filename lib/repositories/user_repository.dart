@@ -5,9 +5,9 @@ import 'package:suitmedia_project1/models/user.dart';
 class UserRepository {
   final String baseUrl = 'https://reqres.in/api/users';
 
-  Future<List<User>> fetchUsers({int page = 1}) async {
+  Future<List<User>> fetchUsers({int page = 1, int perPage = 10}) async {
     final response = await http.get(
-      Uri.parse('$baseUrl?page=$page'),
+      Uri.parse('$baseUrl?page=$page&per_page=$perPage'),
       headers: {'x-api-key': 'reqres-free-v1'},
     );
     if (response.statusCode == 200) {

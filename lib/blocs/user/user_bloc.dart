@@ -28,7 +28,10 @@ class UserBloc extends Bloc<UserEvent, UserState> {
     emit(UserLoading());
 
     try {
-      final newUsers = await userRepository.fetchUsers(page: _currentPage);
+      final newUsers = await userRepository.fetchUsers(
+        page: _currentPage,
+        perPage: 6,
+      );
 
       if (newUsers.isEmpty) {
         _hasReachedMax = true;
