@@ -188,11 +188,4 @@ class _FirstScreenState extends State<FirstScreen> {
       ),
     );
   }
-
-  @override
-  void dispose() {
-    _nameCtrl.dispose();
-    _palindromeCtrl.dispose();
-    super.dispose();
-  }
 }
